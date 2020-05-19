@@ -14,9 +14,7 @@ The generator create maze of differents sizes and they can be perfect or not.
 
 The solver just solve the map return by the generator.
 
-The 'X' are the walls
-The '*' are free spaces
-The 'o' represent the maze solution
+The 'X' are the walls. The '*' are free spaces. The 'o' represent the maze solution
 
 You can find the subject at ./subject/
 
@@ -30,4 +28,8 @@ You just have to run 'make' command at the root of the project.
 
 ## How to launch the project
 
-`./generator/`
+To launch the generator : `./generator/generator x y [perfect]`
+
+To save in file the maze generated : `./generator/generator x y [perfect] > filepath`
+
+To lauch the solver : `./solver/solver filepath`
