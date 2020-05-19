@@ -11,9 +11,9 @@ int my_showstr(char const *str)
 {
     if (*str == '\0')
         return (0);
-    if (*str != '\0' && *str >= ' ' && *str <= '~')
+    if ((*str != '\0' && *str >= ' ') && *str <= '~')
         my_putchar(str[0]);
-    if (*str != '\0' && *str < ' ' || *str > '~') {
+    if ((*str != '\0' && *str < ' ') || *str > '~') {
         my_putchar('\\');
         if (*str < 64)
             my_putchar('0');

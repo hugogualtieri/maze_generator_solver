@@ -18,6 +18,7 @@ int flag_percent(va_list ap)
 int flag_s_caps(va_list ap)
 {
     my_showstr(va_arg(ap, char*));
+    return (0);
 }
 
 int check_flags(char c)

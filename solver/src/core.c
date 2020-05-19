@@ -18,11 +18,11 @@ int check_multiple_path(int i, char c, dante_t *ft)
 {
     int check = 0;
 
-        if (i > ft->x && (ft->maze[i - ft->x - 1] == c))
+        if (i > ft->x && ft->maze[i - ft->x - 1] == c)
             check += 1;
         if (ft->maze[i + ft->x + 1] == c && i < (ft->size - ft->x))
             check += 1;
-        if ((ft->maze[i + 1] == c))
+        if (ft->maze[i + 1] == c)
             check += 1;
         if (i > 0 && ft->maze[i - 1] == c)
             check += 1;
@@ -31,11 +31,11 @@ int check_multiple_path(int i, char c, dante_t *ft)
 
 int assign_direction(int i, char c, dante_t *ft)
 {
-    if ((ft->maze[i + 1] == c))
+    if (ft->maze[i + 1] == c)
         return (i + 1);
     if (ft->maze[i + ft->x + 1] == c && i < (ft->size - ft->x))
         return (i + (ft->x + 1));
-    if (i > ft->x && (ft->maze[i - ft->x - 1] == c))
+    if (i > ft->x && ft->maze[i - ft->x - 1] == c)
         return (i - (ft->x + 1));
     if (i > 0 && ft->maze[i - 1] == c)
         return (i - 1);

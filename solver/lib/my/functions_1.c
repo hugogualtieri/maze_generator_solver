@@ -33,4 +33,5 @@ int flag_c(va_list ap)
 int flag_o(va_list ap)
 {
     my_putnbr_base_o(va_arg(ap, unsigned int), "01234567");
+    return (0);
 }

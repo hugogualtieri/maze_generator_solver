@@ -8,11 +8,13 @@
 #include "./../include/my.h"
 #include "./../include/struct.h"
 #include <stdlib.h>
+#include <sys/stat.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <errno.h>
 #include <limits.h>
+#include <dirent.h>
 
 int find_lenght_line(char *maze)
 {
@@ -72,7 +74,7 @@ int errors(int ac, char **av)
         exit(84);
     }
     if (ac == 2) {
-        if ((filestat.st_mode & __S_IFMT) == __S_IFDIR) {
+        if ((filestat.st_mode & S_IFMT) == S_IFDIR) {
             write(2, "Bad maze format\n", 16);
             exit(84);
         }
