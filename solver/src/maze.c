@@ -5,11 +5,10 @@
 ** resolver
 */
 
-#include "./../include/my.h"
 #include "./../include/struct.h"
 #include <stdlib.h>
+#include <fcntl.h>
 #include <sys/stat.h>
-#include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <errno.h>

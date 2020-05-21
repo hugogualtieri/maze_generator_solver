@@ -5,7 +5,6 @@
 ** resolver
 */
 
-#include "./../include/my.h"
 #include "./../include/struct.h"
 #include <stdlib.h>
 #include <unistd.h>

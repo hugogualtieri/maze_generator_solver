@@ -14,8 +14,7 @@ CFLAGS	=	-g3 -W -Wall -Wextra -Ofast
 all: $(NAME) clean1
 
 $(NAME): $(SRC)
-	make -C ./lib/my
-	gcc $(CFLAGS) -g3 -o $(NAME) $(SRC) -L./lib/my -L. -lmy
+	gcc $(CFLAGS) -g3 -o $(NAME) $(SRC)
 
 clean1 clean2:
 	rm -f *.o

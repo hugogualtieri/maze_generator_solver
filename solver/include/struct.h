@@ -8,7 +8,6 @@
 #ifndef BSQ_H_
 # define BSQ_H_
 
-#include "./my.h"
 #include <unistd.h>
 
 #define SORRY {                                             \
