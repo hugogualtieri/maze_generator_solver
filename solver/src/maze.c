@@ -42,7 +42,7 @@ int find_number_line(char *maze)
 int check_ismap_valid(char *maze, int size)
 {
     if (maze[0] != '*' || maze[size - 1] != '*') {
-        write(2, "No entry or exit in this maze\n", 30);
+        write(1, "No entry or exit in this maze\n", 30);
         return (84);
     }
     return (0);
@@ -70,12 +70,12 @@ int errors(int ac, char **av)
     if (stat(av[1], &filestat) == -1)
         exit(84);
     if (ac != 2) {
-        write(2, "Format : './solver [maze]'\n", 27);
+        write(1, "Format : './solver [maze]'\n", 27);
         exit(84);
     }
     if (ac == 2) {
         if ((filestat.st_mode & S_IFMT) == S_IFDIR) {
-            write(2, "Bad maze format\n", 16);
+            write(1, "Bad maze format\n", 16);
             exit(84);
         }
     }
